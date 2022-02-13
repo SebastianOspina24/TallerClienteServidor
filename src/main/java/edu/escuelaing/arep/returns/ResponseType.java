@@ -1,9 +1,7 @@
 package edu.escuelaing.arep.returns;
 
-import java.awt.image.*;
 import java.io.*;
 import java.net.Socket;
-import javax.imageio.ImageIO;
 
 import edu.escuelaing.arep.NanoServerException;
 
@@ -38,6 +36,7 @@ public class ResponseType {
                 BufferedReader br;
                 try {
                     br = getBufferedReaderFromlocation(url);
+
                     pagina += "200 OK\r\n Content-Type: text/" + devo + "\r\n\r\n";
                     pagina += toString(br);
                 } catch (Exception e) {
