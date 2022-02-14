@@ -1,6 +1,7 @@
 package edu.escuelaing.arep.returns;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
@@ -14,6 +15,8 @@ public class PetitionResponse {
             url = entrada.split(" ")[1].substring(1);
             try {
                 System.out.println(Paths.get("").toAbsolutePath());
+                System.out.println( new File("").getAbsoluteFile());
+                System.out.println("/src/"+url);
                 ResponseType.getInstance().recursoToString("/src/"+url, clienteSocket);
             } catch (IOException e) {
                 try {
