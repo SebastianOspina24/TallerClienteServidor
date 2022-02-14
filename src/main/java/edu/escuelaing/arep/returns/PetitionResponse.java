@@ -15,7 +15,6 @@ public class PetitionResponse {
             url = entrada.split(" ")[1].substring(1);
             try {
                 System.out.println(Paths.get("").toAbsolutePath());
-                System.out.println( new File("").getAbsoluteFile());
                 System.out.println("/src/"+url);
                 ResponseType.getInstance().recursoToString("/src/"+url, clienteSocket);
             } catch (IOException e) {
