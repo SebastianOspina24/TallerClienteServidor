@@ -12,7 +12,7 @@ public class PetitionResponse {
         if (entrada.contains("GET")) {
             url = entrada.split(" ")[1].substring(1);
             try {
-                ResponseType.getInstance().recursoToString(url, clienteSocket);
+                ResponseType.getInstance().recursoToString("/src/"+url, clienteSocket);
             } catch (IOException e) {
                 try {
                     ResponseType.getInstance().recursoToString("/resource/img/404.jpg", clienteSocket);
