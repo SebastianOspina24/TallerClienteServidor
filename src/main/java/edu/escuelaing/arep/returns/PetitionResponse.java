@@ -16,7 +16,7 @@ public class PetitionResponse {
             try {
                 System.out.println(Paths.get("").toAbsolutePath());
                 System.out.println("/src/"+url);
-                ResponseType.getInstance().recursoToString("/src/"+url, clienteSocket);
+                ResponseType.getInstance().recursoToString("../../src/"+url, clienteSocket);
             } catch (IOException e) {
                 try {
                     ResponseType.getInstance().recursoToString("/resource/img/404.jpg", clienteSocket);

@@ -26,7 +26,6 @@ public class ResponseType {
      */
 
     public void recursoToString(String url, Socket clienteSocket) throws IOException {
-        System.out.println(getClass().getProtectionDomain().getCodeSource().getLocation());
         String devo = getExtension(url);
         Tipo type = getType(url);
         PrintWriter out = new PrintWriter(
