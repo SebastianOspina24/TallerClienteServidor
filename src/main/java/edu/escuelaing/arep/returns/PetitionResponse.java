@@ -14,8 +14,6 @@ public class PetitionResponse {
         if (entrada.contains("GET")) {
             url = entrada.split(" ")[1].substring(1);
             try {
-                System.out.println(Paths.get("").toAbsolutePath());
-                System.out.println("/src/"+url);
                 ResponseType.getInstance().recursoToString("../../src/"+url, clienteSocket);
             } catch (IOException e) {
                 try {

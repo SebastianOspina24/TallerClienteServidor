@@ -17,11 +17,11 @@ public class NanoServer {
             System.err.println("No es posible escuchar por el puerto  " + port);
             System.exit(1);
         }
-        System.out.println("El servidor ya esta listo");
+        //System.out.println("El servidor ya esta listo");
         while (funcionando) {
             Socket clientSocket = null;
             try {
-                System.out.println("Listo para recibir ...");
+                //System.out.println("Listo para recibir ...");
                 clientSocket = serverSocket.accept();
             } catch (IOException e) {
                 System.err.println("Accept failed.");
