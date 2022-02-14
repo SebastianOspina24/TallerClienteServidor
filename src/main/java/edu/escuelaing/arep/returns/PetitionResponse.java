@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
+import java.nio.file.Paths;
 
 public class PetitionResponse {
 
@@ -12,6 +13,7 @@ public class PetitionResponse {
         if (entrada.contains("GET")) {
             url = entrada.split(" ")[1].substring(1);
             try {
+                System.out.println(Paths.get("").toAbsolutePath());
                 ResponseType.getInstance().recursoToString("/src/"+url, clienteSocket);
             } catch (IOException e) {
                 try {
