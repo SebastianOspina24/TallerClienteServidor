@@ -1,11 +1,9 @@
 package edu.escuelaing.arep.returns;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
-import java.nio.file.Paths;
 
 public class PetitionResponse {
 
@@ -14,7 +12,7 @@ public class PetitionResponse {
         if (entrada.contains("GET")) {
             url = entrada.split(" ")[1].substring(1);
             try {
-                ResponseType.getInstance().recursoToString("../../src/"+url, clienteSocket);
+                ResponseType.getInstance().recursoToString(url, clienteSocket);
             } catch (IOException e) {
                 try {
                     ResponseType.getInstance().recursoToString("/resource/img/404.jpg", clienteSocket);

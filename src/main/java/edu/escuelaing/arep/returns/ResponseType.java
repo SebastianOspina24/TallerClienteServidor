@@ -32,6 +32,7 @@ public class ResponseType {
             clienteSocket.getOutputStream(), true);
         switch (type) {
             case TXT:
+            System.out.println(url);
                 String pagina = "HTTP/1.1";
                 BufferedReader br;
                 try {
